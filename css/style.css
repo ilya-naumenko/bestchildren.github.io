@@ -11,7 +11,7 @@
 
 /* roboto-condensed-regular - cyrillic_latin */
 @font-face {
-  font-family: 'Roboto Condensed';
+  font-family: 'Roboto Condensed-bestchildren';
   font-style: normal;
   font-weight: 400;
   src: url('../fonts/roboto-condensed-v18-cyrillic_latin-regular.woff2') format('woff2'),
@@ -24,7 +24,7 @@
 
 /* roboto-condensed-700 - cyrillic_latin */
 @font-face {
-  font-family: 'Roboto Condensed';
+  font-family: 'Roboto Condensed-bestchildren';
   font-style: normal;
   font-weight: 700;
   src: url('../fonts/roboto-condensed-v18-cyrillic_latin-700.woff2') format('woff2'),
@@ -35,7 +35,7 @@
 
 /* oswald-regular - cyrillic_latin */
 @font-face {
-  font-family: 'Oswald';
+  font-family: 'Oswald-bestchildren';
   font-style: normal;
   font-weight: 400;
   src: local(''),
@@ -44,7 +44,7 @@
 }
 /* oswald-500 - cyrillic_latin */
 @font-face {
-  font-family: 'Oswald';
+  font-family: 'Oswald-bestchildren';
   font-style: normal;
   font-weight: 500;
   src: local(''),
@@ -53,7 +53,7 @@
 }
 /* oswald-700 - cyrillic_latin */
 @font-face {
-  font-family: 'Oswald';
+  font-family: 'Oswald-bestchildren';
   font-style: normal;
   font-weight: 700;
   src: local(''),
