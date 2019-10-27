@@ -1,0 +1,6 @@
+{
+    "git.ignoreLimitWarning": true,
+    "editor.find.autoFindInSelection": true,
+    "terminal.integrated.windowsEnableConpty": false
+   
+}
