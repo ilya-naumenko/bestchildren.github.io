@@ -62,17 +62,9 @@ body {
 
 .wrapper {
   max-width: 1140px;
-  width: 100%;
   margin: 0 auto;
-  padding: 0 15px;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: minmax(700px, max-content) minmax(2450px, max-content) minmax(460px, max-content) minmax(460px, max-content) minmax(230px, max-content) minmax(460px, max-content) minmax(260px, max-content);
-  grid-row-gap: 30px; }
+  padding: 15px; }
 
-/*.grid-item {
- *  border: 1px solid rgb(100, 100, 100)
- *}*/
 .background-header {
   position: fixed;
   background-position: center;
@@ -83,7 +75,8 @@ body {
 
 .header {
   display: grid;
-  grid-template-rows: 60px 220px minmax(420px, max-content); }
+  grid-template-rows: minmax(30px, max-content) minmax(220px, max-content) minmax(420px, max-content);
+  row-gap: 10px; }
 
 .grid-contact {
   display: grid;
@@ -92,8 +85,9 @@ body {
   align-items: center;
   font-weight: bold;
   font-size: 18px;
-  height: 30px;
-  color: #003333; }
+  color: #003333;
+  padding: 0;
+  margin: 0; }
   .grid-contact a {
     display: grid;
     grid-template-columns: 17px 1fr;
@@ -118,7 +112,6 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-self: end;
-    justify-items: end;
     width: 75px;
     height: 30px; }
     .grid-contact .grid-contact__social-icon img {
@@ -128,9 +121,6 @@ body {
       display: block;
       width: 30px;
       height: 30px; }
-
-.header-contact {
-  margin-top: 15px; }
 
 .header-wrapper {
   display: grid;
@@ -180,7 +170,8 @@ body {
   width: 100px;
   height: 100px;
   transition: 0.3s;
-  margin: auto; }
+  justify-self: center;
+  align-self: center; }
   .button-header__form:hover {
     background: rgba(0, 164, 181, 0.4);
     color: #fff;
@@ -407,5 +398,32 @@ hr {
   font-style: normal;
   font-weight: bold;
   font-size: 18px; }
+
+/*==========  Desktop First  ==========*/
+/* xl (>=1200) */
+/* Large Devices, Wide Screens */
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .grid-contact {
+    font-size: 16px; } }
+
+/**/
+/* Small Devices, Tablets */
+/**/
+/* Extra Small Devices, Phones */
+/**/
+/* Custom, iPhone Retina */
+/**/
+/*==========  Mobile First  ==========*/
+/* Custom, iPhone Retina */
+/**/
+/* Extra Small Devices, Phones */
+/**/
+/* Small Devices, Tablets */
+/**/
+/* Medium Devices, Desktops */
+/**/
+/* Large Devices, Wide Screens */
+/**/
 
 /*# sourceMappingURL=main.css.map */
