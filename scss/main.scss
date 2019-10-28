@@ -6,18 +6,9 @@
 
 .wrapper {
   max-width: 1140px;
-  width: 100%;
   margin: 0 auto;
-  padding: 0 15px;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: minmax(700px, max-content) minmax(2450px, max-content) minmax(460px, max-content) minmax(460px, max-content) minmax(230px, max-content) minmax(460px, max-content) minmax(260px, max-content);
-  grid-row-gap: 30px;
+  padding: 15px;
 }
-
-/*.grid-item {
- *  border: 1px solid rgb(100, 100, 100)
- *}*/
 
 .background-header {
   position: fixed;
@@ -30,7 +21,8 @@
 
 .header {
   display: grid;
-  grid-template-rows: 60px 220px minmax(420px, max-content);
+  grid-template-rows: minmax(30px, max-content) minmax(220px, max-content) minmax(420px, max-content);
+  row-gap: 10px;
 }
 
 .grid-contact {
@@ -40,8 +32,11 @@
   align-items: center;
   font-weight: bold;
   font-size: 18px;
-  height: 30px;
   color: #003333;
+  padding: 0;
+  margin: 0;
+
+
 
   a {
     display: grid;
@@ -76,7 +71,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-self: end;
-    justify-items: end;
     width: 75px;
     height: 30px;
 
@@ -91,11 +85,6 @@
       height: 30px;
     }
   }
-
-}
-
-.header-contact {
-  margin-top: 15px;
 
 }
 
@@ -156,7 +145,8 @@
   width: 100px;
   height: 100px;
   transition: 0.3s;
-  margin: auto;
+  justify-self: center;
+  align-self: center;
 
   &:hover {
     background: rgba(0, 164, 181, 0.4);
@@ -439,4 +429,4 @@ hr {
   font-size: 18px;
 }
 
-@import "media"
+@import "media";
