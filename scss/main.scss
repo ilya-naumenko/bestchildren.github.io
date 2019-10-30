@@ -21,7 +21,7 @@
 
 .header {
   display: grid;
-  grid-template-rows: minmax(30px, max-content) minmax(220px, max-content) minmax(420px, max-content);
+  grid-template-rows: minmax(30px, max-content) minmax(200px, max-content) minmax(40px, max-content) minmax(420px, max-content);
   row-gap: 10px;
 }
 
@@ -104,44 +104,38 @@
   h1 {
     align-self: start;
     margin: 0;
-    font-family: Oswald;
+    font-family: "Oswald-b";
     font-weight: 500;
     font-size: 36px;
     text-align: center;
+    color: $dark;
   }
 
   p {
     align-self: start;
     justify-self: center;
     width: 70%;
-    font-family: Oswald;
+    font-family: "Oswald-b";
     font-size: 22px;
     text-align: center;
+    color: $dark;
   }
 
-  h2 {
-    align-self: start;
-    font-family: Oswald;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    text-align: center;
-    text-transform: uppercase;
-  }
+
 }
 
-.button-header__form {
+.header-wrapper__button {
   background-color: #ffcc00;
   text-align: center;
-  font-family: Oswald;
+  font-family: "Oswald-b";
   font-style: normal;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 16px;
-  padding: 35px 0;
   text-transform: uppercase;
-  color: black;
+  color: $dark;
   border-radius: 50px;
-  display: block;
+  display: grid;
+  align-content: center;
   width: 100px;
   height: 100px;
   transition: 0.3s;
@@ -180,6 +174,18 @@ nav {
       transition: 0.3s;
     }
   }
+}
+
+h2 {
+  align-self: center;
+  font-family: "Oswald-b";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  height: 60px;
+  color: $dark;
 }
 
 .wrapper-header-lessons {
@@ -289,8 +295,16 @@ ul.lesson-description {
   list-style-position: outside;
 }
 
+.news,
+.gallery,
+.about {
+  display: grid;
+  grid-template-rows: 60px auto;
+  border-top: 1.5px solid $medium;
+  row-gap: 15px;
+}
+
 h4 {
-  margin-top: 10px;
   font-family: "Oswald-b";
   font-size: 18px;
   text-align: center;
@@ -298,22 +312,23 @@ h4 {
   color: #000000;
 }
 
-.news__item p,
-.gallery__item p,
-.comments__item p {
-  font-family: "Oswald-b";
-  font-size: 18px;
-  text-align: center;
-  color: #9E9E9E;
+.news__item,
+.gallery__item,
+.comments__item,
+.about h4 {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+
+  p {
+    color: $medium;
+
+    font: {
+      family: "Oswald-b";
+    }
+  }
 }
 
-.wrapper-news {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 190px 190px;
-  column-gap: 30px;
-  row-gap: 20px;
-}
 
 .news__item,
 .gallery__item,
@@ -321,39 +336,49 @@ h4 {
   height: 60px;
 }
 
-.wrapper-news img {
-  width: 190px;
-  height: 190px;
-  object-fit: cover;
-}
 
 .news-block {
   display: grid;
-  grid-template-columns: 190px auto;
+  grid-template-columns: 250px auto 30px;
   column-gap: 30px;
-  font-family: 'Roboto Condensed-b', sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  height: 370px;
+  align-items: center;
+
+  img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+  }
+
+  .news-block__item {
+    display: grid;
+    grid-template-rows: 90% 10%;
+    row-gap: 5%;
+
+    p:last-child {
+      color: #9E9E9E;
+    }
+  }
 }
 
-.news-block__item {
+.up-down {
   display: grid;
-  grid-template-rows: 160px 1px 29px;
-}
+  grid-auto-rows: auto;
+  justify-content: center;
 
-hr {
-  border: 1px solid #9E9E9E;
-}
+  a {
+    color: $medium;
+    font-size: 2rem;
 
-.news-block__item p:last-child {
-  color: #9E9E9E;
+    &:hover {
+      color: $dark;
+    }
+  }
 }
 
 .gallery__wrapper-photo {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 185px 185px;
+
 
   img {
     width: 185px;
@@ -367,12 +392,35 @@ hr {
   }
 }
 
+.comments {
+  display: grid;
+  grid-template-columns: auto 30px;
+  grid-template-rows: 60px auto;
+  border-top: 1.5px solid $medium;
+  row-gap: 15px;
+  grid-template-areas: "comments__item comments__up-down"
+    "comments__text comments__up-down";
+
+  .comments__item {
+    grid-area: comments__item;
+  }
+
+  .comments__text {
+    grid-area: comments__text;
+  }
+
+  .comments__up-down {
+    grid-area: comments__up-down;
+    height: 96px;
+    align-self: center;
+  }
+}
+
 .comments__text,
 .about p {
-  margin: 0 auto;
+  justify-self: center;
   min-width: 300px;
   max-width: 600px;
-  padding-top: 15px;
 }
 
 .footer {

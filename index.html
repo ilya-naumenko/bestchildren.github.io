@@ -21,7 +21,7 @@
   </div>
 
   <header class="grid-item wrapper header">
-    <div class="grid-item grid-contact wrapper">
+    <div class="grid-item grid-contact">
       <div class="grid-contact__phone">
         <a href="tel:+77012256545">
           <img src="images/icon-contact-phone.svg" alt="icon">
@@ -58,12 +58,11 @@
         <h1>Центр детского развития "ЛУЧшие дети"</h1>
         <p>Цель нашего центра — гармоничное развитие детей раннего,
           дошкольного и младшего школьного возраста</p>
-        <h2>ДЕТСКИЕ РАЗВИВАЮЩИЕ ЗАНЯТИЯ НАШЕГО ЦЕНТРА</h2>
       </div>
-      <a href="#" class="button-header__form">записаться</a>
+      <a href="#" class="header-wrapper__button">заказать звонок</a>
       <nav>
         <ul>
-          <li><a href="#">главная</a></li>
+          <!--<li><a href="#">главная</a></li>-->
           <li><a href="#news">новости</a></li>
           <li><a href="#gallery">галерея</a></li>
           <li><a href="#comments">отзывы</a></li>
@@ -72,6 +71,7 @@
         </ul>
       </nav>
     </div>
+    <h2>ДЕТСКИЕ РАЗВИВАЮЩИЕ ЗАНЯТИЯ НАШЕГО ЦЕНТРА</h2>
     <div class="grid-item wrapper-header-lessons">
       <a href="#psychologist" class="grid-item header-lessons-link">
         <img src="images/icon-psychologist.svg" alt="icon">
@@ -139,6 +139,8 @@
   <main class="grid-item wrapper main">
     <div class="main-lessons psychologist" id="psychologist">
       <img src="images/icon-psychologist.svg" alt="icon">
+
+
       <h3>Логопед Психолог</h3>
 
       <ul class="lesson-description">
@@ -361,60 +363,30 @@
 
   </main>
   <section class="grid-item wrapper news" id="news">
-    <hr>
     <div class=" grid-item news__item">
       <h4>Новости</h4>
       <p>все новости</p>
     </div>
-    <div class="wrapper-news">
-      <div class="news-block">
-        <img src="images/icon-photo.png" alt="icon">
-        <div class="news-block__item">
-          <p>Поскольку наш детский развивающий центр является
-            комплексным решением, то это снимает многие проблемы
-            с родителей. Конечно, хорошо, когда после рождения малыша
-            мама может остаться в декретном отпуске...</p>
-          <hr>
-          <p>10.11.2019</p>
-        </div>
+    <div class="news-block">
+      <img src="images/icon-photo.png" alt="icon">
+      <div class="news-block__item">
+        <p>Поскольку наш детский развивающий центр является
+          комплексным решением, то это снимает многие проблемы
+          с родителей. Конечно, хорошо, когда после рождения малыша
+          мама может остаться в декретном отпуске...
+          Поскольку наш детский развивающий центр является
+          комплексным решением, то это снимает многие проблемы
+          с родителей. Конечно, хорошо, когда после рождения малыша
+          мама может остаться в декретном отпуске...</p>
+        <p>10.11.2019</p>
       </div>
-      <div class="news-block">
-        <img src="images/icon-photo.png" alt="icon">
-        <div class="news-block__item">
-          <p>Поскольку наш детский развивающий центр является
-            комплексным решением, то это снимает многие проблемы
-            с родителей. Конечно, хорошо, когда после рождения малыша
-            мама может остаться в декретном отпуске...</p>
-          <hr>
-          <p>10.11.2019</p>
-        </div>
-      </div>
-      <div class="news-block">
-        <img src="images/icon-photo.png" alt="icon">
-        <div class="news-block__item">
-          <p>Поскольку наш детский развивающий центр является
-            комплексным решением, то это снимает многие проблемы
-            с родителей. Конечно, хорошо, когда после рождения малыша
-            мама может остаться в декретном отпуске...</p>
-          <hr>
-          <p>10.11.2019</p>
-        </div>
-      </div>
-      <div class="news-block">
-        <img src="images/icon-photo.png" alt="icon">
-        <div class="news-block__item">
-          <p>Поскольку наш детский развивающий центр является
-            комплексным решением, то это снимает многие проблемы
-            с родителей. Конечно, хорошо, когда после рождения малыша
-            мама может остаться в декретном отпуске...</p>
-          <hr>
-          <p>10.11.2019</p>
-        </div>
+      <div class="up-down">
+        <a href="#" title=""><i class="fas fa-caret-up"></i></a>
+        <a href="#" title=""><i class="fas fa-caret-down"></i></a>
       </div>
     </div>
   </section>
   <section class="grid-item wrapper gallery" id="gallery">
-    <hr>
     <div class="gallery__item">
       <h4>Галерея</h4>
       <p>вся галерея</p>
@@ -435,7 +407,6 @@
     </div>
   </section>
   <section class="comments wrapper" id="comments">
-    <hr>
     <div class="comments__item">
       <h4>Отзывы</h4>
       <p>все отзывы</p>
@@ -446,9 +417,12 @@
       спасибо вам за работу и любовь к нашим детям!
       Лена мама Марьям.
     </p>
+    <div class="comments__up-down up-down">
+      <a href="#" title=""><i class="fas fa-caret-up"></i></a>
+      <a href="#" title=""><i class="fas fa-caret-down"></i></a>
+    </div>
   </section>
   <section class="grid-item wrapper about" id="about">
-    <hr>
     <h4>О нас</h4>
     <p>Мы принимаем детей в возрасте до 2-х и от 2 до 12 лет.
       Наш детский развивающий центр располагает всем необходимым,
