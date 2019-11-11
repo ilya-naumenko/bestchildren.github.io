@@ -5,9 +5,12 @@
 
 
 .wrapper {
+  //display: grid;
   max-width: 1140px;
-  margin: 0 auto;
+  margin: 0 auto 15px;
   padding: 15px;
+
+  //justify-items: center;
 }
 
 .background-header {
@@ -21,11 +24,16 @@
 
 .header {
   display: grid;
-  grid-template-rows: minmax(30px, max-content) minmax(200px, max-content) minmax(40px, max-content) minmax(420px, max-content);
+  grid-template-rows: minmax(30px, max-content) minmax(200px, max-content) minmax(60px, max-content) minmax(420px, max-content);
   row-gap: 10px;
+  justify-items: center;
 }
 
-.grid-contact {
+// HEADER КОНТАКТЫ
+
+.grid-contact,
+.header-contact {
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
   justify-items: start;
@@ -33,10 +41,6 @@
   font-weight: bold;
   font-size: 18px;
   color: #003333;
-  padding: 0;
-  margin: 0;
-
-
 
   a {
     display: grid;
@@ -46,12 +50,9 @@
     color: #003333;
   }
 
-  .grid-contact__phone {
-    width: 165px;
-  }
+  .grid-contact__phone {}
 
   .grid-contact__address {
-    width: 355px;
     display: grid;
     grid-template-columns: 21px 1fr;
     align-items: center;
@@ -59,23 +60,21 @@
   }
 
   .grid-contact__email {
-    width: 180px;
     display: grid;
-    grid-template-columns: 30px 1fr;
+    grid-template-columns: auto 1fr;
     align-items: center;
     column-gap: 13px;
-
   }
 
   .grid-contact__social-icon {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-self: end;
-    width: 75px;
-    height: 30px;
+    column-gap: 15px;
+
 
     img {
-      width: 30px;
+      /*width: 30px;*/
       height: 30px;
     }
 
@@ -88,9 +87,13 @@
 
 }
 
+//  ЛОГОТИП, НАЗВАНИЕ, ОПИСАНИЕ, ЗАКАЗАТЬ ЗВОНОК
+
 .header-wrapper {
   display: grid;
   grid-template-columns: 20% 60% 10% 10%;
+  background-color: rgba(255, 255, 255, 0.281);
+  padding: 0 15px;
 }
 
 .header-logo img {
@@ -124,6 +127,8 @@
 
 }
 
+// КНОПКА ЗАКАЗАТЬ ЗВОНОК
+
 .header-wrapper__button {
   background-color: #ffcc00;
   text-align: center;
@@ -149,11 +154,54 @@
   }
 }
 
+.mp-hidden {
+  display: none;
+}
+
+
+// ФОРМА ЗАКАЗА ЗВОНКА
+
+.form {
+  background-color: #fff;
+  max-width: 320px;
+  margin: auto;
+  padding: 40px 20px 20px;
+  position: relative;
+  border-radius: 10px;
+
+  p {
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
+  input {
+    width: 100%;
+    margin: auto;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    height: 35px;
+    border: 1px solid $medium;
+    border-radius: 5px;
+    padding-left: 5px;
+    box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5);
+  }
+
+  .form__buttom {
+    width: 100%;
+    height: 35px;
+    border: 1px solid $medium;
+    border-radius: 5px;
+  }
+
+}
+
+// МЕНЮ
+
 nav {
   font-family: "Oswald-b";
   font-size: 18px;
   text-transform: uppercase;
-  color: #FFFFFF;
+  margin: auto 0;
 
   ul {
     display: grid;
@@ -161,10 +209,7 @@ nav {
     justify-content: right;
   }
 
-  li {
-    margin-bottom: 5px;
-    right: 10px;
-  }
+  li {}
 
   a {
     color: #00A4B5;
@@ -176,22 +221,42 @@ nav {
   }
 }
 
-h2 {
-  align-self: center;
-  font-family: "Oswald-b";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  text-align: center;
-  text-transform: uppercase;
-  height: 60px;
-  color: $dark;
+
+// ЗАГОЛОВОК Центр детского развития "ЛУЧшие дети"
+
+.title-lessons {
+  min-height: 60px;
+  margin-bottom: 15px;
+
+  h2 {
+    align-self: center;
+    font-family: "Oswald-b";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $dark;
+  }
+
+  p {
+    color: rgb(99, 99, 99);
+    text-align: center;
+    font-size: 14px;
+  }
 }
+
+
+
+
+// ДЕТСКИЕ РАЗВИВАЮЩИЕ ЗАНЯТИЯ НАШЕГО ЦЕНТРА
 
 .wrapper-header-lessons {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   column-gap: 15px;
+  justify-items: center;
+
 }
 
 .header-lessons-link {
@@ -216,25 +281,30 @@ a.header-lessons-link img {
   transition: 0.3s;
 }
 
+
+
+// БЛОКИ ОПИСАНИЯ ЗАНЯТИЙ ЦЕНТРА
+
+
+
 .main {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
-}
-
-.main-lessons,
-.learn {
-  width: 350px;
-  height: 460px;
-  background: linear-gradient(180deg, #B2E3E9 0%, #FFFFFF 100%);
-  position: relative;
+  justify-items: center;
 }
 
 .main-lessons {
-  img {
-    position: absolute;
-    left: 10px;
-    top: 10px;
+  max-width: 350px;
+  min-height: 460px;
+  background: linear-gradient(180deg, #B2E3E9 0%, #FFFFFF 100%);
+  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.144);
+
+  &__title {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    column-gap: 10px;
   }
 
   &:target {
@@ -242,66 +312,47 @@ a.header-lessons-link img {
   }
 
   h3 {
-    position: absolute;
-    left: 90px;
-    top: 10px;
-    width: 250px;
     font-family: "Oswald-b";
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 500;
     text-transform: uppercase;
   }
-}
 
-
-
-.questions p {
-  position: absolute;
-  left: 90px;
-  top: 46px;
-  font-family: "Roboto Condensed-b";
-  font-weight: 700;
+  span {
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: 700;
+  }
 }
 
 .learn p,
 .mom-baby p,
-.chess p {
-  position: absolute;
-  left: 10px;
-  top: 350px;
-  width: 330px;
-}
-
+.chess p,
 .guitar p {
-  position: absolute;
-  left: 10px;
-  top: 390px;
-  width: 330px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 15px;
 }
 
-span {
-  position: absolute;
-  left: 10px;
-  top: 80px;
-  width: 330px;
-  font-weight: 700;
-}
 
 ul.lesson-description {
-  position: absolute;
-  left: 27px;
-  top: 115px;
-  width: 315px;
   list-style-position: outside;
+  padding-right: 10px;
+  padding-left: 30px;
+  padding-bottom: 10px;
 }
+
+
+// НОВОСТИ, ГАЛЕРЕЯ, ОТЗЫВЫ
+
 
 .news,
 .gallery,
+.comments,
 .about {
-  display: grid;
-  grid-template-rows: 60px auto;
   border-top: 1.5px solid $medium;
-  row-gap: 15px;
+  max-width: 750px;
 }
 
 h4 {
@@ -312,16 +363,15 @@ h4 {
   color: #000000;
 }
 
-.news__item,
-.gallery__item,
-.comments__item,
+.news__title,
+.gallery__title,
+.comments__title,
 .about h4 {
-  display: grid;
-  align-items: center;
-  justify-items: center;
+  height: 60px;
 
   p {
     color: $medium;
+    text-align: center;
 
     font: {
       family: "Oswald-b";
@@ -329,137 +379,137 @@ h4 {
   }
 }
 
+/* НОВОСТИ */
 
-.news__item,
-.gallery__item,
-.comments__item {
-  height: 60px;
-}
-
-
-.news-block {
-  display: grid;
-  grid-template-columns: 250px auto 30px;
-  column-gap: 30px;
-  align-items: center;
-
-  img {
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-  }
-
-  .news-block__item {
+.news-box {
+  .news-box__item {
     display: grid;
-    grid-template-rows: 90% 10%;
-    row-gap: 5%;
+    grid-template-columns: 230px auto;
+    column-gap: 15px;
+    align-items: center;
+    max-width: 750px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.199);
+    margin: 0 auto;
 
-    p:last-child {
-      color: #9E9E9E;
+    img {
+      width: 230px;
+      height: 230px;
+      object-fit: cover;
+      border-radius: 50%;
     }
   }
 }
 
-.up-down {
-  display: grid;
-  grid-auto-rows: auto;
-  justify-content: center;
 
-  a {
-    color: $medium;
-    font-size: 2rem;
+/* ГАЛЕРЕЯ */
 
-    &:hover {
-      color: $dark;
+.gallery-box {
+  // display: grid;
+  // grid-template-columns: 1fr 1fr 1fr;
+  // justify-items: center;
+  // max-width: 750px;
+  // margin: 0 auto;
+
+
+  .gallery-box__item {
+    max-width: 750px;
+    max-height: 375px;
+
+    img {
+      width: 100%;
+      object-fit: cover;
     }
   }
 }
 
-.gallery__wrapper-photo {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+/* ОТЗЫВЫ*/
 
+.comments-box {
+  .comments-box__item {
+    display: grid;
+    grid-template-columns: 150px auto;
+    column-gap: 15px;
+    align-items: center;
+    max-width: 750px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.199);
+    margin: 0 auto;
 
-  img {
-    width: 185px;
-    height: 185px;
-    object-fit: cover;
-    transition: 0.3s;
-
-    &:hover {
-      transform: scale(1.2);
+    img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
     }
   }
 }
 
-.comments {
-  display: grid;
-  grid-template-columns: auto 30px;
-  grid-template-rows: 60px auto;
-  border-top: 1.5px solid $medium;
-  row-gap: 15px;
-  grid-template-areas: "comments__item comments__up-down"
-    "comments__text comments__up-down";
 
-  .comments__item {
-    grid-area: comments__item;
-  }
 
-  .comments__text {
-    grid-area: comments__text;
-  }
-
-  .comments__up-down {
-    grid-area: comments__up-down;
-    height: 96px;
-    align-self: center;
-  }
-}
-
-.comments__text,
-.about p {
-  justify-self: center;
-  min-width: 300px;
-  max-width: 600px;
-}
-
+/* КОНТАКТЫ */
 .footer {
   background-color: #E5F5F7;
-  margin-bottom: 30px;
+
+
 
   .footer__item {
     margin-top: 23px;
-    width: 330px;
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
+    text-align: center;
   }
 
   .footer-contact {
-    margin-top: 13px;
+    margin: 13px auto 0;
   }
 }
 
+// НИЖНЯЯ КНОПКА ЗАКАЗАТЬ ЗВОНОК
+
 .button-form {
-  display: block;
   position: fixed;
   width: 70px;
   height: 70px;
   background: rgba(255, 204, 0, 0.5);
-  border-radius: 100%;
+  border-radius: 50%;
   bottom: 50px;
   right: 200px;
+  border: opacity($color: #000000);
+  animation: radial-pulse 1s infinite;
+  animation-delay: 1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   img {
-    display: flex;
-    width: 50px;
-    height: 50px;
     display: block;
     width: 50px;
     height: 50px;
-    margin: 10px auto;
+    margin: 0;
+  }
+
+  &:hover {
+    background: rgba(0, 164, 181, 0.4);
+    color: #fff;
+    transition: 0.3s;
+    animation-play-state: paused;
+    transform: scale(1.2);
   }
 }
+
+@keyframes radial-pulse {
+  0% {
+    box-shadow: 0 0 0 0px rgba(226, 193, 8, 0.5);
+  }
+
+  100% {
+    box-shadow: 0 0 0 40px rgba(226, 193, 8, 0);
+  }
+}
+
+// КНОПКА НАВЕРХ
 
 .topbutton {
   text-align: center;
@@ -469,36 +519,6 @@ h4 {
   right: 50px;
   cursor: pointer;
   color: #333;
-
-}
-
-.fa-arrow-up:before {
-  content: "\f062";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  font-size: 1.5rem;
-}
-
-.fa-caret-up:before {
-  content: "\f0d8";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-}
-
-.fa-caret-down:before {
-  content: "\f0d7";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-}
-
-.fas {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  line-height: 1;
 }
 
 @import "media";
