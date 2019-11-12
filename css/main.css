@@ -647,7 +647,6 @@ h4 {
   .header-description {
     grid-area: header-description; }
     .header-description h1 {
-      width: 80%;
       justify-self: center;
       font-size: 18px; }
     .header-description p {
