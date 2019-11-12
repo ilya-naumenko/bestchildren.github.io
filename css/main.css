@@ -636,6 +636,7 @@ h4 {
     grid-template-columns: 1fr;
     grid-template-areas: "header-logo" "header-description" "header__nav"; }
     .header-wrapper .header-logo {
+      margin-top: 10px;
       display: grid;
       justify-self: center;
       align-self: center;
@@ -648,9 +649,11 @@ h4 {
     grid-area: header-description; }
     .header-description h1 {
       justify-self: center;
+      margin-bottom: 10px;
       font-size: 18px; }
     .header-description p {
       width: 85%;
+      margin-bottom: 10px;
       font-size: 16px; }
   .header-wrapper__button {
     grid-area: header-wrapper__button;
@@ -662,7 +665,8 @@ h4 {
     text-transform: lowercase;
     color: #FFFFFF;
     align-items: center;
-    grid-area: header__nav; }
+    grid-area: header__nav;
+    margin-bottom: 10px; }
     nav ul {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
