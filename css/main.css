@@ -379,6 +379,9 @@ h4 {
     object-fit: cover;
     border-radius: 50%; }
 
+.about__text {
+  margin-bottom: 1em; }
+
 /* КОНТАКТЫ */
 .footer {
   background-color: #e5f5f7; }
