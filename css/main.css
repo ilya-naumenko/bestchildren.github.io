@@ -229,7 +229,7 @@ nav {
 .title-lessons {
   min-height: 60px;
   margin-bottom: 15px; }
-  .title-lessons h2 {
+  .title-lessons .title-lessons__desc {
     align-self: center;
     font-family: "Oswald-b";
     font-style: normal;
@@ -238,7 +238,7 @@ nav {
     text-align: center;
     text-transform: uppercase;
     color: #003333; }
-  .title-lessons p {
+  .title-lessons .title-lessons__subtitle {
     color: #636363;
     text-align: center;
     font-size: 14px; }
@@ -384,6 +384,7 @@ h4 {
 
 /* КОНТАКТЫ */
 .footer {
+  margin-bottom: 0;
   background-color: #e5f5f7; }
   .footer .footer__item {
     margin-top: 23px;
@@ -393,6 +394,12 @@ h4 {
     text-align: center; }
   .footer .footer-contact {
     margin: 13px auto 0; }
+
+.developer {
+  display: block;
+  color: #003333;
+  text-align: center;
+  margin-top: 15px; }
 
 .button-form {
   position: fixed;
@@ -427,6 +434,8 @@ h4 {
     box-shadow: 0 0 0 40px rgba(226, 193, 8, 0); } }
 
 .topbutton {
+  font-size: 32px;
+  font-weight: bold;
   text-align: center;
   padding: 10px;
   position: fixed;
